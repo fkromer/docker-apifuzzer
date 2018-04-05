@@ -1,4 +1,3 @@
-#FROM rcarmo/alpine-python:2.7
 FROM python:2.7-alpine
 MAINTAINER Florian Kromer <florian.kromer@mailbox.org>
 

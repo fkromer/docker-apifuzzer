@@ -9,8 +9,8 @@
 
 APIFuzzer dockerized...
 
-Docker [alpine-python:2.7 image](https://hub.docker.com/r/rcarmo/alpine-python/)
-which provides [APIFuzzer](https://github.com/KissPeter/APIFuzzer) (`master` branch).
+Docker [python:2.7-alpine](https://hub.docker.com/r/library/python/) which
+provides [APIFuzzer](https://github.com/KissPeter/APIFuzzer) (`master` branch).
 
 ## Usage
 
