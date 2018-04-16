@@ -1,4 +1,4 @@
 sudo: required
 services:
   - docker
-script: docker run --rm -i lukasmartinelli/hadolint sh -c 'hadolint' < Dockerfile
+script: docker run --rm -i lukasmartinelli/hadolint < Dockerfile
