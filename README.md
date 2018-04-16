@@ -6,6 +6,7 @@
 ![Docker Build Status](https://img.shields.io/docker/build/fkromer/apifuzzer.svg)
 ![MicroBadger Size](https://img.shields.io/microbadger/image-size/fkromer/apifuzzer.svg)
 ![MicroBadger Layers](https://img.shields.io/microbadger/layers/fkromer/apifuzzer.svg)
+[![Build Status](https://travis-ci.org/fkromer/docker-apifuzzer.svg?branch=master)](https://travis-ci.org/fkromer/docker-apifuzzer)
 
 APIFuzzer dockerized...
 
