@@ -3,6 +3,7 @@ LABEL maintainer="Florian Kromer <florian.kromer@mailbox.org>"
 
 RUN apk add --no-cache git
 RUN git clone git://github.com/KissPeter/APIFuzzer.git
-RUN pip2.7 install -r APIFuzzer/requirements.txt
 WORKDIR /APIFuzzer
+RUN git checkout tags/v0.9
+RUN pip2.7 install -r requirements.txt
 CMD python2.7 fuzzer.py

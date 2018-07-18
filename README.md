@@ -11,21 +11,27 @@
 APIFuzzer dockerized...
 
 Docker [python:2.7-alpine](https://hub.docker.com/r/library/python/) which
-provides [APIFuzzer](https://github.com/KissPeter/APIFuzzer) (`master` branch).
+provides [APIFuzzer](https://github.com/KissPeter/APIFuzzer) (`v0.9`).
 
 ## Usage
 
-Build image.
+Print help (with `latest` or e.g. `v0.1.0` as `<tag>`).
 
-    docker build -t apifuzzer:latest .
-
-Print help.
-
-    docker run --rm -it apifuzzer:latest
+    docker run --rm -it fkromer/apifuzzer:<tag>
 
 Consider you have the OpenAPI defintion file `api.json` in the `$PWD/api/`.
 (Adjust mounting with `-v` option accordingly.)
 
-Fuzz (`-s` specifies OpenAPI definition file, `-u` specifies URL.).
+Fuzz (`<tag>` latest or specific tag, `-s` specifies OpenAPI definition file, `-u` specifies URL.).
 
-    docker run --rm -it -v $PWD/api:/APIFuzzer/srcfileroot apifuzzer:latest -s /APIFuzzer/srcfileroot/api.json -u <url-to-fuzz>
+    docker run --rm -it -v $PWD/api:/APIFuzzer/srcfileroot fkromer/apifuzzer:<tag> -s /APIFuzzer/srcfileroot/api.json -u <url-to-fuzz>
+
+## Development
+
+Lint the Dockerfile.
+
+    docker run --rm -i lukasmartinelli/hadolint < Dockerfile
+
+Build image.
+
+    docker build -t apifuzzer:latest .
